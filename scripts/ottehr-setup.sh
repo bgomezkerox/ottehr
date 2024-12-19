@@ -6,6 +6,10 @@ set -e
 # Initialize an empty string for error messages
 errors=""
 
+# Cargar nvm si se está usando
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
 # Check if script is being run from root directory
 if [ ! -f ./pnpm-workspace.yaml ]; then
   errors+="Error: This script must be run from the root of the workspace\n"

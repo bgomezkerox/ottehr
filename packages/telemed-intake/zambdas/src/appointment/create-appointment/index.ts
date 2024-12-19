@@ -316,7 +316,7 @@ async function creatingPatientCreateRequest(
       },
     ];
   }
-  if (patient.emailUser === 'Patient') {
+  if (patient.emailUser === 'Paciente') {
     // if the user is the staff, which happens when using the add-patient page,
     // user.name will not be a phone number, like it would be for a patient. In this
     // case, we must insert the patient's phone number using patient.phoneNumber

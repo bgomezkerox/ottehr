@@ -8,7 +8,7 @@ import { useTrackingBoardStore } from '../telemed';
 import { allLicensesForPractitioner, User } from 'ehr-utils';
 import useOttehrUser from '../hooks/useOttehrUser';
 
-type UserType = 'Patient' | 'Parent/Guardian';
+type UserType = 'Paciente' | 'Parent/Guardian';
 
 interface PatientInfo {
   id?: string;
@@ -150,7 +150,6 @@ const generateRandomPatientInfo = async (
         sex: randomSex,
         email: randomEmail,
         emailUser: 'Patient',
-        phoneNumber: phoneNumber,
       },
       scheduleType: 'location',
       visitType: 'now',
@@ -172,7 +171,6 @@ const generateRandomPatientInfo = async (
       sex: randomSex,
       email: randomEmail,
       emailUser: 'Patient',
-      phoneNumber: phoneNumber,
     },
     // In fututre we might want to generate future date appointments for the patients
     // slot: DateTime.now()

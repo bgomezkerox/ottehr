@@ -101,7 +101,7 @@ export function validateCreateAppointmentParams(
     throw new Error(`"patient.sex" must be one of the following values: ${JSON.stringify(Object.values(PersonSex))}`);
   }
 
-  const patientUser = ['Patient', 'Parent/Guardian'];
+  const patientUser = ['Paciente', 'Parent/Guardian'];
   if (!patientUser.includes(patient.emailUser)) {
     throw new Error(
       `"patient.emailUser" must be one of the following values: ${JSON.stringify(Object.values(patientUser))}`,

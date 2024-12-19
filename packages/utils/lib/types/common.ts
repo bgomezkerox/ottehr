@@ -101,7 +101,7 @@ export interface ConsentSigner {
   relationship: string;
 }
 
-export type UserType = 'Patient' | 'Parent/Guardian';
+export type UserType = 'Paciente' | 'Parent/Guardian';
 
 export interface ContactInfo {
   formUser?: UserType;
